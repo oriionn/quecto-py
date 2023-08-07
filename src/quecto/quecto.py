@@ -13,7 +13,7 @@ class Quecto:
         :param link: The link to shorten
         :param password: The password to protect the link
         :rtype dict
-        :return: The shortened link
+        :return: The API response
         """
 
         body = {
@@ -39,6 +39,14 @@ class Quecto:
             }
 
     def unshortUrl(self, link, password: str = "") -> dict:
+        """
+        Unshorten a link
+        :param link: The shortened link to unshorten
+        :param password: The password used to protect the shortened link
+        :rtype dict
+        :return: The API response
+        """
+
         code = link.split('/')[-1]
         apiUrl = self.instanceUrl + 'api/s/' + code
         if password != "":
@@ -55,5 +63,11 @@ class Quecto:
             }
 
     def isValidInstance(self) -> bool:
+        """
+        Verify if the instance is valid
+        :rtype bool
+        :return: If the instance is valid
+        """
+
         r = requests.get(self.instanceUrl + 'api/quectoCheck')
         return r.status_code == 200
