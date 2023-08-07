@@ -2,7 +2,7 @@
 name="quecto"
 description="The official python wrapper for Quecto, a link shortener"
 readme="README.md"
-version="1.0.0"
+version="1.0.1"
 license= { file = "LICENSE" }
 requires-python=">=3.7"
 keywords=["API", "wrapper", "quecto", "link", "shortener", "shorten", "short"]
