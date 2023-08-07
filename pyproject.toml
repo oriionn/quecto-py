@@ -11,8 +11,7 @@ authors = [
 ]
 classifiers=  [
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3",
-    "License: GPL version 3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3"
 ]
 dependencies = [
     "requests",
