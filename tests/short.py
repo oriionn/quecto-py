@@ -4,5 +4,6 @@ client = Quecto('https://s.oriondev.fr')
 r = client.shortUrl('https://example.com')
 if r["error"]:
     print("Error: " + r["status"])
+    print("Test 1: Failed")
 else:
-    print(r["shorten"])
+    print("Test 1: Passed")
